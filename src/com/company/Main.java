@@ -14,6 +14,16 @@ public class Main {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+    public static void bubbleSwap(String[] arr, int i, int j){
+        String temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    public static void selectSwap(double[] arr, int i, int j){
+        double temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
     public static void insertionSort(int[] arr){
         for(int i = 1; i < arr.length; i++){
             int j = i;
@@ -23,20 +33,21 @@ public class Main {
             }
         }
     }
-    public static void selectionSort(int[] arr){
+    public static void selectionSort(double[] arr){
         for(int i = 0; i < arr.length; i++){
             for(int j = 0; j < arr.length-1; j++){
                 if(arr[i] < arr[j]){
-                    swap(arr, j, i);
+                    selectSwap(arr, j, i);
                 }
             }
         }
     }
-    public static void bubbleSwap(int[] arr){
-        for(int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr.length-1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    swap(arr, j, j + 1);
+    //use compareTo
+    public static void bubbleSwap(String[] list1){
+        for(int i = 0; i < list1.length; i++){
+            for(int j = 0; j < list1.length-1; j++) {
+             //   if (list1[j] > list1[j + 1]) {
+                    bubbleSwap(list1, j, j + 1);
                 }
             }
         }
