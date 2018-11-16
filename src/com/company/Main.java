@@ -24,11 +24,11 @@ public class Main {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    public static void insertionSort(int[] arr){
-        for(int i = 1; i < arr.length; i++){
+    public static void insertionSort(int[] list1){
+        for(int i = 1; i < list1.length; i++){
             int j = i;
-            while(j-1 > 0 && arr[j] < arr[j-1]){
-                swap(arr, j, j-1);
+            while(j-1 > 0 && list1[j] < list1[j-1]){
+                swap(list1, j, j-1);
                 j--;
             }
         }
