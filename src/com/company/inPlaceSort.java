@@ -64,7 +64,10 @@ public class inPlaceSort {
         int k = left;
 
         while(i <= mid && j <= right){
-            if(arr[i] < arr[i]){
+            if(arr[i] < arr[j]){
+                temp[k] = arr[i];
+                i++;
+            }else{
                 temp[k] = arr[j];
                 j++;
             }
@@ -81,7 +84,7 @@ public class inPlaceSort {
             k++;
         }
         for(k = left; k <= right; k++){
-            arr[k] = temp[k]
+            arr[k] = temp[k];
         }
     }
 }
