@@ -13,6 +13,7 @@ public class Runner {
         inPlaceSort.insertionSort(intList);
         inPlaceSort.selectionSort(doubleList);
         inPlaceSort.bubbleSort(stringList);
+        inPlaceSort.quickSort(intList, 0, intList.length);
 
         System.out.println("Insertion Sort Outs:");
         for(int i = 0; i < intList.length; i++){
@@ -29,5 +30,9 @@ public class Runner {
         System.out.println("Merge Sort Outs: ");
         inPlaceSort.mergeSort(mergeSortTest);
         System.out.println(Arrays.toString(mergeSortTest));
+
+        System.out.println("Quick Sort Outs: ");
+        System.out.println(Arrays.toString(intList));
+
     }
 }
